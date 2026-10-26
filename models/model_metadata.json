@@ -1,0 +1,21 @@
+{
+  "best_model": "Random Forest",
+  "features": [
+    "Country",
+    "Crop",
+    "Year",
+    "Area_harvested_ha"
+  ],
+  "target": "Yield_kg_ha",
+  "target_unit": "kg/ha",
+  "training_rows": 50000,
+  "test_size": 0.2,
+  "random_state": 42,
+  "selection_metric": "lowest test-split RMSE (educational baseline; use grouped/time validation for final scientific claims)",
+  "source": "FAOSTAT QCL - Production: Crops and livestock products",
+  "source_unit": "kg/ha",
+  "rows": 50000,
+  "note": "Rebuilt from the cleaned Colab export; production is not an input feature.",
+  "full_cleaned_rows": 50000,
+  "training_sample_rows": 50000
+}

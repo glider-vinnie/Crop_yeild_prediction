@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local Streamlit run logs
+streamlit.stdout.log
+streamlit.stderr.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
