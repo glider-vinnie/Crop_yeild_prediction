@@ -3,7 +3,7 @@
 End-to-end Statistical Interface Lab project: FAOSTAT page scraping, data collection, preprocessing, exploratory analysis, regression training, and Streamlit GUI.
 
 ## Live application
-The public deployment link will appear here after the first cloud deployment completes.
+[Open CropScope: Crop yield prediction](https://cropyieldai.streamlit.app/)
 
 ## Important design choice
 This first version predicts FAOSTAT's recorded crop yield from **Country/Area, Crop, Year, and Area harvested**. It intentionally does not use production as an input feature because yield is derived from production / area. FAOSTAT is country/area-level data, so the output is a historical-statistics-based estimate, not a farm-level agronomic forecast.
