@@ -25,7 +25,7 @@ RAW_DIR = DATA_DIR / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 HEADERS = {
-    "User-Agent": "CropYieldAILabProject/1.0 (educational research; contact: student project)"
+    "User-Agent": "CropScopeCropYieldPrediction/1.0 (educational research; contact: student project)"
 }
 
 def scrape_faostat_download_links(page_url=FAOSTAT_PAGE):

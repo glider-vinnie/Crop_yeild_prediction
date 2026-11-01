@@ -1,6 +1,9 @@
-# CropYield AI — FAOSTAT Crop Yield Prediction
+# CropScope: Crop yield prediction
 
 End-to-end Statistical Interface Lab project: FAOSTAT page scraping, data collection, preprocessing, exploratory analysis, regression training, and Streamlit GUI.
+
+## Live application
+The public deployment link will appear here after the first cloud deployment completes.
 
 ## Important design choice
 This first version predicts FAOSTAT's recorded crop yield from **Country/Area, Crop, Year, and Area harvested**. It intentionally does not use production as an input feature because yield is derived from production / area. FAOSTAT is country/area-level data, so the output is a historical-statistics-based estimate, not a farm-level agronomic forecast.
@@ -41,7 +44,7 @@ scikit-learn version, run `python src/train_model.py` once to rebuild it locally
 The scraper writes the complete raw dataset to `data/raw/faostat_qcl_raw.csv` when run via the notebook workflow. The CLI scraper currently prints a sample by default; use the notebook for the full pipeline.
 
 ## Deploy
-Push the repository to GitHub. Ensure `models/best_model.joblib`, `models/model_metadata.json`, `models/model_metrics.csv`, and `data/crop_yield_training.csv` are present. Then deploy `app.py` at https://share.streamlit.io/ using `requirements.txt`.
+Push the repository to GitHub. Ensure `models/best_model.joblib`, `models/model_metadata.json`, `models/model_metrics.csv`, and `data/crop_yield_training.csv` are present. The model is stored with Git LFS. Then deploy `app.py` at https://share.streamlit.io/ using `requirements.txt`.
 
 ## Web scraping and data provenance
 The script requests the public FAOSTAT QCL page with `requests`, parses anchors using BeautifulSoup, and looks for the official normalized ZIP archive link. FAOSTAT may render parts of the page with JavaScript; if no link is exposed in the returned HTML, the script uses the documented public bulk-download URL as a fallback. The ZIP contains normalized CSV data. Record the retrieval date and any changes to the source URL in your lab report.

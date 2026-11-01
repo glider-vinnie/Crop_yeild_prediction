@@ -12,7 +12,7 @@ META_PATH = ROOT / "models" / "model_metadata.json"
 DATA_PATH = ROOT / "data" / "crop_yield_training.csv"
 METRICS_PATH = ROOT / "models" / "model_metrics.csv"
 
-st.set_page_config(page_title="CropYield AI", page_icon="🌱", layout="wide")
+st.set_page_config(page_title="CropScope: Crop yield prediction", page_icon="🌱", layout="wide")
 
 st.markdown("""
 <style>
@@ -90,7 +90,7 @@ def model_features(metadata, model):
 
 st.markdown("""
 <div class="hero">
-  <h1>🌱 CropYield AI</h1>
+  <h1>🌱 CropScope: Crop yield prediction</h1>
   <p>Explore FAOSTAT crop statistics and estimate crop yield with machine learning.</p>
 </div>
 """, unsafe_allow_html=True)
@@ -230,4 +230,4 @@ else:
         st.json(metadata)
 
 st.markdown("---")
-st.caption("CropYield AI · Educational use · Data attribution: FAOSTAT / Food and Agriculture Organization of the United Nations.")
+st.caption("CropScope: Crop yield prediction · Educational use · Data attribution: FAOSTAT / Food and Agriculture Organization of the United Nations.")
